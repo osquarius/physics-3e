@@ -1,0 +1,68 @@
+\subsection*{Bilans ciepny --- zadań ciąg dalszy}
+\subsubsection*{Zadanie~1. (z~pułapką)}
+\begin{statement}
+    Do mieszaniny złożonej z~\(5\kg\) lodu i~\(4\kg\) wody w \(t = 0\celsius\) wpuszczono \(0,5\kg\) pary wodnej o~temperaturze \(100\celsius\). Jaka będzie temperatura końcowa? Jaka masa lodu ulegnie stopieniu?
+\end{statement}
+Dane:
+\begin{gather*}
+    c_\p{w} = 4200\frac{\J}{\kg \cdot \celsius} \qquad c_\p{s} = 2,26 \cdot 10^6\frac{\J}{\kg} \qquad c_\p{t} = 335000\frac{\J}{\kg}\\
+    m_\p{w} = 4\kg \qquad m_\ell = 5\kg \qquad m_\p{p} = 0,5\kg\\
+    t_\p{p} = 100\celsius \qquad t_\p{miesz.} = 0\celsius
+\end{gather*}
+Rozwiązanie naiwne:
+\begin{align*}
+    Q_\p{odd.} &= Q_\p{pobr.}\\
+    m_\p{p} \cdot c_\p{p} \cdot (100 - t_k) &= c_\p{t} \cdot m_\ell + (m_\ell + m_\p{w}) \cdot c_\p{w} \cdot t_k\\
+    0,5 \cdot 2,26 \cdot 10^6 + 0,5 \cdot 4200 (100 - t_k) &= 335000 \cdot 5 + 9 \cdot 4200 \cdot t_k\\
+    t_k &= -8,4\celsius
+\end{align*}
+To niemożliwe, czyli coś nie wyszło. Nie możemy tak policzyć, ponieważ nie cały lód się stopi. Zatem temperatura końcowa będzie wynosiła \(0\celsius\).
+\begin{align*}
+    t_k &= 0\celsius\\
+    Q_\p{odd.} &= Q_\p{pobr.}\\
+    m_\p{p} \cdot c_\p{s} + m_\p{p} \cdot c_\p{w} \cdot 100 &= c_\p{t} \cdot m_x\\
+    m_x = \frac{m_\p{p} \cdot c_\p{s} + m_\p{p} \cdot c_\p{w} \cdot 100}{c_\p{t}}
+        &= \frac{2,26 \cdot 10^6 \cdot 0,5 + 0,5 \cdot 4200 \cdot 100}{335000}
+        = 4
+\end{align*}
+Stopią się \(4\kg\) lodu.
+\subsubsection*{Zadanie~2.}
+\begin{statement}
+    W~układzie centralnego ogrzewania woda o~temperaturze \(60\celsius\) oddaje ciepło, ochładzając się do \(37\celsius\). Układ ten wymieniono na inny, w~którym para o~temperaturze \(100\celsius\) skrapla się pod ciśnieniem atmosferycznym i~ochładza do \(82\celsius\). Jaka masa pary wodnej da taki sam efekt grzejny co \(1\kg\) wody w~poprzednim układzie?
+\end{statement}
+Dane:
+\begin{gather*}
+    c_\p{w} = 4200\frac{\J}{\kg \cdot \celsius} \qquad c_\p{s} = 2,26 \cdot 10^6 \frac{\J}{\kg}\\
+    m_\p{w} = 1\kg\\
+    \Delta t_1 = 60\celsius - 37\celsius = 23\celsius\\
+    \Delta t_2 = 100\celsius - 82\celsius = 18\celsius
+\end{gather*}
+\begin{align*}
+    Q_1 &= Q_2\\
+    m_\p{w} \cdot c_\p{w} \cdot \Delta t_1 &= m_\p{p} \cdot c_\p{s} + m_\p{p} \cdot c_\p{w} \cdot \Delta t_2\\
+    m_\p{p} = \frac{m_\p{w} \cdot c_\p{w} \cdot \Delta t_1}{c_\p{s} + c_\p{w} \cdot \Delta t_2}
+        &= \frac{1 \cdot 4200 \cdot 23}{2,26 \cdot 10^6 + 4200 \cdot 18}
+        \approx 0,041\kg
+        = 41\g
+\end{align*}
+Taki sam efekt grzejny da \(41\g\) pary wodnej.
+\subsubsection*{Zadanie~3.}
+\begin{statement}
+    W~chłodnicy ciężkiego karabinu maszynowego znajdują się \(4\kg\) wody o~temperaturze \(0\celsius\). Karabin strzela z~częstotliwością \(10\) pocisków na sekundę. W~każdym pocisku znajduje się \(3,2\g\) prochu, którego ciepło spalania wynosi \(c_\p{s} = 3,8 \cdot 10^6 \frac{\J}{\kg}\). Na ogrzanie lufy karabinu zużywane jest \(30\%\) wydzielanego przy wystrzale ciepła. Po jakim czasie nieustannego strzelania wyparuje połowa wody w~chłodnicy?
+\end{statement}
+Dane:
+\begin{gather*}
+    m_\p{w} = 4\kg \qquad T_\p{w} = 0\celsius \qquad c_\p{w} = 4200\frac{\J}{\kg \cdot \celsius} \qquad c_\p{p} = 2,26 \cdot 10^6\frac{\J}{\kg}\\
+    m_\p{p} = 3,2\g = 0,0032\kg \qquad c_\p{s} = 3,8 \cdot 10^6\frac{\J}{\kg}\\
+    f = \frac{10}{s}\\
+    \eta = 0,3\\
+\end{gather*}
+Ciepło które ogrzewa lufę wydzielane przy wystrzale, zostaje oddane do chłodnicy i~służy do podgrzania całej wody do \(100\celsius\) i~zamienienia połowy wody w~parę bez zmiany temperatury.
+\begin{align*}
+    Q_\p{odd.} &= Q_\p{pobr.}\\
+    t \cdot f \cdot m_\p{p} \cdot c_\p{s} \cdot \eta &= m_\p{w} \cdot c_\p{w} \cdot 100\celsius + \frac{m_\p{w}}{2} \cdot c_\p{p}\\
+    t = \frac{m_\p{w} \cdot c_\p{w} \cdot 100\celsius + \frac{m_\p{w}}{2} \cdot c_\p{p}}{f \cdot m_\p{p} \cdot c_\p{s} \cdot \eta}
+        &= \frac{4 \cdot 4200 \cdot 100 \cdot 2 \cdot 2,26 \cdot 10^6}{10 \cdot 0,0032 \cdot 3,8 \cdot 10^6 \cdot 0,3}
+        \approx 170\s
+\end{align*}
+Połowa wody wyparuje z~chłodnicy po \(170\s\).

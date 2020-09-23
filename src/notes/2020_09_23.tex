@@ -1,0 +1,121 @@
+\subsection*{Rozszerzalność termiczna ciał stałych, cieczy i~gazów}
+Kiedy wzrasta temperatura, to wzrasta częstotliwość drgań drobin ciała. Przez to ciało ,,puchnie'', rozszerza się.
+\begin{equation*}
+    \frac{\Delta V}{V_0} = \gamma \cdot \Delta T
+\end{equation*}
+\begin{description}
+    \item[\(V_0\)] --- objętość początkowa
+    \item[\(\gamma\)] --- objętościowy współczynnik rozszerzalności termicznej \(\unit{\frac{1}{\K}}\) --- mówi nam, jaki jest względny przyrost objętości przy wzroście temperatury o~\(1\K\). Współczynniki te są zwykle małe.
+\end{description}
+Może też zwiększać się powierzchnia ciała, np. szyby:
+\begin{mathfigure*}
+    \draw (-1, -1) rectangle node{\(S_0\)} (1, 1);
+    \draw (-1, -0.6) -| node[below]{\(\Delta S\)}(0.6, 1);
+\end{mathfigure*}
+\begin{equation*}
+    \frac{\Delta S}{S_0} = \beta \cdot \Delta T
+\end{equation*}
+\begin{description}
+    \item[\(S_0\)] --- powierzchnia początkowa
+    \item[\(\Delta S\)] \({} = S_k - S_0\)
+    \item[\(\beta\)] --- powierzchniowy współczynnik rozszerzalności termicznej \(\unit{\frac{1}{\K}}\)
+\end{description}
+Co z~tego wynika?
+\begin{itemize}
+    \item nie łączymy bezpośrednio materiałów o~znacząco różnej rozszerzalności termicznej (np. szkła i~metalu), ponieważ powstaną naprężenia, które spowodują uszkodzenie elementu (np. szyby)
+    \item szyby osadzamy w~kicie, aby miały trochę swobody przy rozszerzaniu się
+\end{itemize}
+W~przypadku prętów zwiększa się długość:
+\begin{gather*}
+    \frac{\Delta \ell}{\ell_0} = \alpha \cdot \Delta T\\
+    \beta \approx 2\alpha \qquad \text{ (odrzucamy pomijalne powierzchnie)}\\
+    \gamma \approx 3\alpha \qquad \text{ (odrzucamy pomijalne objętości)}
+\end{gather*}
+\begin{description}
+    \item[\(\ell_0\)] --- długość początkowa
+    \item[\(\alpha\)] --- liniowy współczynnik rozszerzalności termicznej \(\unit{\frac{1}{\K}}\)
+\end{description}
+Co z~tego wynika?
+\begin{itemize}
+    \item przerwy dylatacyjne --- w~torach zostawia się wolne przestrzenie między kolejnymi fragmentami torów, ponieważ inaczej torowisko wybrzuszy się podczas termicznego rozszerzania się, co może prowadzić do wykolejenia pojazdu
+    \item przerwy między przęsłami mostu (szczególnie w~przypadku mostów, które mają wiele przęseł) --- inaczej może wybrzuszyć się nawet \(2\m\) lub \(3\m\) do góry
+    \item słupy elektryczne --- kable muszą być zamontowane stosunkowo luźno, ponieważ w~zimie naprężają się i~może dojść do ich zerwania
+    \item na trakcjach tramwajowych i~kolejowych kable muszą być napięte, bo inaczej pantograf uległby uszkodzeniu, więc niektóre słupy są osadzone na naprężających słupkach betonowych, które w~przypadku zmian temperatury wyrównują naprężenie
+    \item dylatometr (dylatoskop) --- znajduje się w~nim korytko na denaturat, który spala się, ogrzewając pręt, który z~kolei rozszerza się termicznie i~naciska na wskazówkę
+\end{itemize}
+\subsubsection*{Zadanie~1.}
+\begin{statement}
+    Stalowe szyny kolejowe są układane w~temperaturze \(0\celsius\). Typowy odcinek szyny ma wówczas \(12\m\). Jaką przerwę należy pozostawić pomiędzy odcinkami szyn, by w~temperaturze \(42\celsius\) jeszcze nie powstawały naprężenia ściskające? (\(\alpha = 11 \cdot 10^{-6}\frac{1}{\K}\))
+\end{statement}
+Dane:
+\begin{gather*}
+    T_0 = 0\celsius\\
+    T_k = 42\celsius\\
+    \ell = 12\m\\
+    \alpha = 1,1 \cdot 10^{-5} \frac{1}{\K}
+\end{gather*}
+Podstawiamy i~rozwiązujemy:
+\begin{gather*}
+    \frac{\Delta \ell}{\ell_0} = \alpha \cdot \Delta T\\
+    \Delta \ell = \ell_0 \cdot \alpha \cdot \Delta T = 12\m \cdot 1,1 \cdot 10^{-5} \frac{1}{\K} \cdot 42\K
+        = 0,005544\m
+        = 5,544\mm
+        \approx 6\mm
+\end{gather*}
+Należy zostawić około \(6\mm\) przerwy.
+\subsubsection*{Zadanie~2.}
+\begin{statement}
+    Naczynie o~pojemności \(20\) litrów wypełniono całkowicie naftą. Ile cieczy wyleje się, gdy temperatura wzrośnie o \(30\) kelwinów?
+\end{statement}
+Dane:
+\begin{gather*}
+    V_0 = 20\dm^3\\
+    \Delta T = 30\K\\
+    \gamma = 9,5 \cdot 10^{-4} \frac{1}{\K}
+\end{gather*}
+Podstawiamy i~rozwiązujemy:
+\begin{gather*}
+    \frac{\Delta V}{V_0} = \gamma \cdot \Delta T\\
+    \Delta V
+        = \gamma \cdot V_0 \cdot \Delta T = 9,5 \cdot 10^{-4}\frac{1}{\K} \cdot 20\dm^3 \cdot 30\K
+        = 0,57\dm^3
+        = 0,57\liter
+\end{gather*}
+Wyleje się \(0,57\) litra nafty.
+\subsubsection*{Zadanie~3.}
+\begin{statement}
+    Szklana szyba w~temperaturze \(10\celsius\) ma wymiary \(20\cm\) na \(30\cm\). O~ile wzrośnie jej powierzchnia przy wzroście temperatury do \(40\celsius\)? (\(\alpha = 9 \cdot 10^{-6}\frac{1}{\K}\))
+\end{statement}
+Dane:
+\begin{gather*}
+    T_0 = 10\celsius\\
+    T_K = 40\celsius\\
+    \Delta T = T_k - T_0 = 40\celsius - 10\celsius = 30\celsius = 30\K\\
+    S_0 = 20\cm \cdot 30\cm = 600\cm^2\\
+    \beta \approx 2\alpha = 1,8 \cdot 10^{-5}\frac{1}{\K}
+\end{gather*}
+Podstawiamy i~rozwiązujemy:
+\begin{gather*}
+    \frac{\Delta S}{S_0} = \beta \cdot \Delta T\\
+    \Delta S = \beta \cdot \Delta T \cdot S_0
+        = 9 \cdot 10^{-6}\frac{1}{\K} \cdot 30\K \cdot 600\cm^2 = 0,162\cm^2
+\end{gather*}
+\subsubsection*{Bimetale}
+Są to dwa metale zespawane ze sobą. Przykładowo, jeśli na dole mamy wartstwę metalu o~współczynniku \(\alpha_1\), a~na górze warstwę metalu o~współczynniku \(\alpha_2\) i~\(\alpha_1 > \alpha_2\), to metal przy podgrzewaniu od dołu wygnie się w~górę. Stosowano to do budowy termometrów bimetalicznych.
+\subsubsection*{Zadanie~4.}
+\begin{statement}
+    Końce stalowego pręta o~polu przekroju \(S = 5\cm^2\) przymocowane są sztywno do dwóch ścian. Jaka siła działa na każdą ścianę w~temperaturze \(T_2 = 30\celsius\), jeżeli w~temperaturze \(T_1 = 20\celsius\) w~pręcie nie występują żadne naprężenia? Moduł Younga dla stali wynosi \(E = 2 \cdot 10^{11}\Pa\), współczynnik liniowej rozszerzalności cieplnej jest równy \(\alpha = 1,2 \cdot 10^{-5}\frac{1}{\K}\)
+\end{statement}
+\begin{gather*}
+    \frac{\Delta \ell}{\ell_0} = \alpha \cdot \Delta T\\
+    \frac{\Delta \ell}{\ell_0} \cdot E = \frac{F}{S}\\
+    \alpha \cdot \Delta T \cdot E = \frac{F}{s}\\
+    F = \alpha \cdot \Delta T \cdot E \cdot S
+        = 1,2 \cdot 10^{-5}\frac{1}{\K} \cdot 10\K \cdot 2 \cdot 10^{11} \frac{\N}{\m^2} \cdot 5 \cdot 10^{-4}
+        = 12000\N
+        = 12\kilo\N
+\end{gather*}
+\subsubsection*{Wcale nie zadanie wcale nie domowe}
+\begin{statement}
+    Wykonane ze szkła typu pyrex zwierciadło teleskopu obserwatorium Mount Palomar ma średnicę \(5\m\). Na Mount Palomar temperatura zmienia się od \(-10\celsius\) do \(50\celsius\). Obliczyć największą zmianę średnicy (przyrost liniowy) zwierciadła. (\(\alpha = 3,2 \cdot 10^{-6}\frac{1}{\K}\))
+\end{statement}

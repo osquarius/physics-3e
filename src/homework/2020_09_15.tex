@@ -1,0 +1,81 @@
+\subsubsection*{Zadanie~8.50.}
+Dane:
+\begin{gather*}
+    m_\p{k} = 150\g = 0,15\kg\\
+    m_\p{w} = 500\g = 0,5\kg\\
+    m_1 = m_\p{k} + m_\p{w}\\
+    t_1 = 10\celsius\\
+    t_2 = 100\celsius\\
+    t_k = 40\celsius\\
+    c_\p{w} = 4200\frac{\J}{\kg \cdot \celsius}\\
+    c_\p{Al} = 900\frac{\J}{\kg \cdot \celsius}\\
+    R_\p{p} = 2257000\frac{\J}{\kg}\\
+    L_\ell = 333700\frac{\J}{\kg}
+\end{gather*}
+Para, skraplając się oddaje ciepło:
+\begin{equation*}
+    Q_\p{s} = m_\p{p} \cdot R_\p{p}
+\end{equation*}
+Powstała woda oddaje ciepło:
+\begin{equation*}
+    Q_1 = m_\p{w} \cdot c_\p{w} \cdot \Delta t_2 = m_\p{p} \cdot c_\p{w} \cdot (t_2 - t_k)
+\end{equation*}
+Natomiast woda z~kalorymetru przyjmuje ciepło:
+\begin{equation*}
+    Q_2 = m_\p{w} \cdot c_\p{w} \cdot \Delta t_1 = m_\p{w} \cdot c_\p{w} \cdot (t_k - t_1)
+\end{equation*}
+Podobnie sam kalorymetr:
+\begin{equation*}
+    Q_3 = m_\p{k} \cdot c_\p{Al} \cdot \Delta t_1 = m_\p{k} \cdot c_\p{Al} \cdot (t_k - t_1)
+\end{equation*}
+Z~bilansu cieplnego mamy:
+\begin{align*}
+    Q_\p{pobr.} &= Q_\p{odd.}\\
+    Q_2 + Q_3 &= Q_\p{s} + Q_1\\
+    m_\p{w} \cdot c_\p{w} \cdot (t_k - t_1) + m_\p{k} \cdot c_\p{Al} \cdot (t_k - t_1) &= m_\p{p} \cdot R_\p{p} + m_\p{p} \cdot c_\p{w} \cdot (t_2 - t_k)\\
+    (m_\p{w} \cdot c_\p{w} + m_\p{k} \cdot c_\p{Al}) (t_k - t_1) &= m_\p{p} \parens{R_\p{p} + c_\p{w} (t_2 - t_k)}\\
+    \begin{split}
+        m_\p{p} &= \frac{(m_\p{w} \cdot c_\p{w} + m_\p{k} \cdot c_\p{Al}) (t_k - t_1)}{R_\p{w} + c_\p{w} (t_2 - t_k)}\\
+            &= \frac{(0,5\kg \cdot 4200\frac{\J}{\kg \cdot \celsius} + 0,15\kg \cdot 900\frac{\J}{\kg \cdot \celsius}) (40\celsius - 10\celsius)}{2257000\frac{\J}{\kg} + 4200\frac{\J}{\kg \cdot \celsius} (100\celsius - 40\celsius)}\\
+            &\approx 0,02672\kg
+            = 26,72\g
+    \end{split}
+\end{align*}
+\answer{} Masa pary wynosi \(26,72\g\).
+\subsubsection*{Zadanie~8.51.}
+Dane:
+\begin{gather*}
+    m_\p{k} = 800\g = 0,8\kg\\
+    m_\p{w} = 0,5\kg\\
+    m_\p{p} = 150\g = 0,15\g\\
+    c_\p{w} = 4200\frac{\J}{\kg \cdot \celsius}\\
+    c_\p{Al} = 900\frac{\J}{\kg \cdot \celsius}\\
+    R_\p{p} = 2257000\frac{\J}{\kg}\\
+    L_\ell = 333700\frac{\J}{\kg}
+\end{gather*}
+Początkowa temperatura układu wynosi \(0\celsius\). Para skrapla się i~ochładza, a~lód topi się. Kalorymetr i~cała zawarta w~nim woda się ogrzewa. Zatem z~bilansu cieplnego mamy:
+\begin{align*}
+    Q_\p{pobr.} &= Q_\p{odd.}\\
+    m_\ell \cdot L_\ell + m_\ell \cdot c_\p{w} \cdot \Delta t_1 + m_\p{w} \cdot c_\p{w} \cdot \Delta t_1 + m_\p{k} \cdot c_\p{Al} \cdot \Delta t_1
+        &= m_\p{p} \cdot R_\p{p} + m_\p{p} \cdot c_\p{w} \cdot \Delta t_2\\
+    m_\ell = \frac{m_\p{p} \cdot R_\p{p} + m_\p{p} \cdot c_\p{w} \cdot \Delta t_2 - \Delta t_1 (m_\p{w} \cdot c_\p{w} + m_\p{k} \cdot c_\p{Al})}{L_\ell + c_\p{w} \cdot \Delta t_1}&
+\end{align*}
+\begin{enumerate}[label={\alph*)}]
+    \item ponieważ tutaj temperatura układu kalorymetr -- woda -- lód się nie zmienia, to za \(\Delta t_1\) podstawiamy \(0\). Za \(\Delta t_2\) podstawiamy \(100\celsius\):
+        \begin{equation*}
+            m_\ell = \frac{m_\p{p} \cdot R_\p{p} + m_\p{p} \cdot c_\p{w} \cdot \Delta t_2}{L_\ell}
+                = \frac{0,15\g \cdot 2257000\frac{\J}{\kg} + 0,15\g \cdot 4200\frac{\J}{\kg \cdot \celsius} \cdot 100\celsius}{333700\frac{\J}{\kg}}
+                \approx 1,2\kg
+        \end{equation*}
+        \answer{} Masa lodu wynosiła około \(1,2\kg\).
+    \item ponieważ tutaj temperatura pary się nie zmienia, to za \(\Delta t_2\) podstawiamy \(0\). Za \(\Delta t_1\) podstawiamy \(100\celsius\):
+        \begin{equation*}
+            \begin{split}
+                m_\ell &= \frac{m_\p{p} \cdot R_\p{p} - \Delta t_1 (m_\p{w} \cdot c_\p{w} + m_\p{k} \cdot c_\p{Al})}{L_\ell + c_\p{w} \cdot \Delta t_1}\\
+                    &= \frac{0,15\g \cdot 2257000\frac{\J}{\kg} - 100\celsius \cdot (0,5\kg \cdot 4200\frac{\J}{\kg \cdot \celsius} + 0,8\kg \cdot 900\frac{\J}{\kg \cdot \celsius})}{333700\frac{\J}{\kg} + 4200\frac{\J}{\kg \cdot \celsius} \cdot 100\celsius}\\
+                    &\approx 0,075029\kg
+                    = 75,03\g
+            \end{split}
+        \end{equation*}
+        \answer{} Masa lodu wynosiła około \(75,03\g\).
+\end{enumerate}

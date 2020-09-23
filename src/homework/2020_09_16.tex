@@ -1,0 +1,77 @@
+\subsubsection*{Zadanie~7.2.1.}
+\begin{mathfigure*}
+    \draw[ultra thin, lightgray, step=0.25cm] (0, -1.25) grid (10.75, 2.5);
+    \drawvec (0, 0) -- (10.75, 0) node[above left]{\scriptsize\(Q \unit{\kilo\J}\)};
+    \drawvec (0, -1.25) -- (0, 2.5) node[left]{\scriptsize\(T \unit{\celsius}\)};
+    \drawvmark{1.25, 0}[\scriptsize\(100\)][below];
+    \drawvmark{2.5, 0}[\scriptsize\(200\)][below];
+    \drawvmark{3.75, 0}[\scriptsize\(300\)][below];
+    \drawvmark{5, 0}[\scriptsize\(400\)][below];
+    \drawvmark{6.25, 0}[\scriptsize\(500\)][below];
+    \drawvmark{7.5, 0}[\scriptsize\(600\)][below];
+    \drawvmark{8.75, 0}[\scriptsize\(700\)][below];
+    \drawvmark{10, 0}[\scriptsize\(800\)][below];
+    \drawhmark{0, -1}[\scriptsize\(-40\)][left];
+    \drawhmark{0, -0.5}[\scriptsize\(-20\)][left];
+    \drawhmark{0, 0}[\scriptsize\(0\)][left];
+    \drawhmark{0, 0.5}[\scriptsize\(20\)][left];
+    \drawhmark{0, 1}[\scriptsize\(40\)][left];
+    \drawhmark{0, 1.5}[\scriptsize\(60\)][left];
+    \drawhmark{0, 2}[\scriptsize\(80\)][left];
+    \draw[red, ultra thick] (0, -0.75) -- (0.75, 0) -- (4.875, 0) -- (10, 2.25) -- (10.5, 2.25);
+\end{mathfigure*}
+Z~wykresu odczytujemy, dla \(1\kg\) lodu, że aby przejść od \(-20\celsius\) do \(90\celsius\) potrzeba około \(740\kilo\J\) ciepła. Zatem dla \(6\kg\) potrzeba \(6 \cdot 740\kilo\J = 4440\kilo\J\) ciepła.
+\subsubsection*{Zadanie~7.2.8.}
+Dane:
+\begin{gather*}
+    m = 10\kg \qquad h = 1,5\m \qquad g = 9,81\frac{\m}{\s^2}\\
+    m_\p{p} = 250\g = 0,25\kg \qquad c_\p{ż} = 452\frac{J}{\kg \cdot \K}\\
+    \eta = 0,5 \qquad n = 50
+\end{gather*}
+Układamy bilans energetyczny, w~którym energia oddana to odpowiednia część energii kinetycznej młota (nabranej kosztem energii potencjalnej), a~energia pobrana to ciepło uzyskane przez pierścień:
+\begin{align*}
+    n \cdot E_\p{k} \cdot \eta &= Q\\
+    n \cdot E_\p{p} \cdot \eta &= Q\\
+    n \cdot mgh \cdot \eta &= m_\p{p} \cdot c_\p{ż} \cdot \Delta t\\
+    \Delta t &= \frac{n \cdot mgh \cdot \eta}{m_\p{p} \cdot c_\p{ż}}
+        = \frac{50 \cdot 10\kg \cdot 9,81\frac{\m}{\s^2} \cdot 1,5\m \cdot 0,5}{0,25\kg \cdot 452\frac{\J}{\kg \cdot \K}}
+        \approx 32,56\K
+\end{align*}
+Temperatura pierścienia podniesie się o~około \(32,5\K\).
+\subsubsection*{Zadanie~7.2.10.}
+Dane:
+\begin{gather*}
+    m_\p{h} = 200\g = 0,2\kg \qquad c_\p{h} = c_\p{w} = 4200\frac{\J}{\kg \cdot \celsius} \qquad t_0 = 90\celsius
+\end{gather*}
+\begin{enumerate}[label={\alph*)}]
+    \item
+        \begin{gather*}
+            m = 50\g = 0,05\kg \qquad t = 0\celsius
+        \end{gather*}
+        Układamy bilans cieplny, w~którym ciepło pobiera dolana woda, a~oddaje je herbata. Proces ten zachodzi aż do osiągnięcia wspólnej temperatury końcowej \(t_k\).
+        \begin{align*}
+            Q_\p{pobr.} &= Q_\p{odd.}\\
+            m \cdot c_\p{w} \cdot \Delta t_1 &= m_\p{h} \cdot c_\p{h} \cdot \Delta t_2\\
+            m \cdot c_\p{w} \cdot (t_k - t) &= m_\p{h} \cdot c_\p{h} \cdot (t_0 - t_k)\\
+            t_k &= \frac{m_\p{h} \cdot c_\p{h} \cdot t_0 + m \cdot c_\p{w} \cdot t}{m \cdot c_\p{w} + m_\p{h} \cdot c_\p{h}}
+                = \frac{0,2\kg \cdot 4200\frac{\J}{\kg \cdot \celsius} \cdot 90\celsius + 0,05\kg \cdot 4200\frac{\J}{\kg} \cdot 0\celsius}{0,05\g \cdot 4200\frac{\J}{\kg \cdot \celsius} + 0,2\kg \cdot 4200\frac{\J}{\kg \cdot \celsius}}
+                = 72\celsius
+        \end{align*}
+        Herbata ochłodzi się do \(72\celsius\).
+    \item
+        \begin{gather*}
+            m = 50\g = 0,05\kg \qquad t = 0\celsius\\
+            c_\p{t} = 335000\frac{\J}{\kg}
+        \end{gather*}
+        Układamy bilans cieplny, w~którym ciepło pobiera lód, a~następnie powstała z~niego woda, a~oddaje je herbata. Proces ten zachodzi aż do osiągnięcia wspólnej temperatury końcowej \(t_k\).
+        \begin{align*}
+            Q_\p{pobr.} &= Q_\p{odd.}\\
+            m \cdot c_\p{t} + m \cdot c_\p{w} \cdot \Delta t_1 &= m_\p{h} \cdot c_\p{h} \cdot \Delta t_2\\
+            \begin{split}
+                t_k &= \frac{m_\p{h} \cdot c_\p{h} \cdot t_0 + m \cdot c_\p{w} \cdot t - m \cdot c_\p{t}}{m \cdot c_\p{w} + m_\p{h} \cdot c_\p{h}}\\
+                    &= \frac{0,2\kg \cdot 4200\frac{\J}{\kg \cdot \celsius} \cdot 90\celsius + 0,05\kg \cdot 4200\frac{\J}{\kg} \cdot 0\celsius - 0,05\kg \cdot 335000\frac{\J}{\kg}}{0,05\g \cdot 4200\frac{\J}{\kg \cdot \celsius} + 0,2\kg \cdot 4200\frac{\J}{\kg \cdot \celsius}} \approx 56,05\celsius
+            \end{split}
+        \end{align*}
+        Herbata ochłodzi się do \(56,05\celsius\).
+    \item Niższą temperaturę osiągniemy w~drugim sposobie, ponieważ przed oddawaniem ciepła na podgrzewanie wody herbata musi oddać jeszcze ciepło na roztopienie lodu bez zmiany temperatury.
+\end{enumerate}

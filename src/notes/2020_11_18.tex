@@ -1,0 +1,98 @@
+\subsection*{Sposoby elektryzowania ciał}
+\begin{itemize}
+    \item nadmiar elektronów \(\implies\) ładunek ujemny
+    \item niedobór elektronów \(\implies\) ładunek dodatni
+\end{itemize}
+\subsubsection*{Podział substancji}
+\begin{itemize}
+    \item metale (np. miedź)
+        \begin{itemize}
+            \item posiadają jony w~węzłach sieci krystalicznej
+            \item na jeden taki jon przypada jeden elekrton swobodny (oderwany od atomu, elektrony swobodne tworzą gaz elektronowy, czyli gaz Fermiego --- \(10^5\)-\(10^6\frac{\m}{\s}\), \(T = 300\K\))
+            \item jeśli przyłożymy do metalu naładowane ciało, to elektrony swobodne przemieszczą się w~stronę tego ciała --- indukcja elektrostatyczna
+        \end{itemize}
+    \item dielektryki (zbudowane z~atomów objętnych) --- jeżeli zbliżymy do nich ciało naładowane dodatnio, to w~obrębie każdego atomu dielektryka deformuje się chmura elektronowa i~powstają dipole elektryczne --- polaryzacja
+        \begin{itemize}
+            \item xero składa się z~wałka selenowego, który przyciąga toner, a~następnie wprasowuje go w~papier
+        \end{itemize}
+    \item izolatory --- prawie nie przewodzą prądu elektrycznego
+\end{itemize}
+\subsubsection{Rozkład ładunku na powierzchni}
+Ładunek lubi gromadzić się na ostrzach, dlatego jako piorunochrony stosuje się zaostrzone druty (wynalazek Benjamina Franklina).
+\begin{description}
+    \item[\(\sigma\)] --- powierzchniowa gęstość ładunku
+        \begin{equation*}
+            \sigma = \frac{Q}{S} = \unit{\frac{\C}{\m^2}}
+        \end{equation*}
+    \item[\(R\)] --- promień krzywizny
+        \begin{equation*}
+            \sigma \sim \frac{1}{R}
+        \end{equation*}
+\end{description}
+Urządzenia:
+\begin{description}
+    \item[generator van der Grafa] --- do generowania wysokich napięć:
+        \begin{itemize}
+            \item gumowa ,,nóżka'' --- ładuje się ujemnie
+            \item metalowa czasza -- ładuje się dodatnio
+        \end{itemize}
+        Można robić eksperymenty:
+        \begin{itemize}
+            \item wytwarzanie burzy
+        \end{itemize}
+    \item[maszyna elektrostatyczna]
+\end{description}
+\subsubsection*{Zasada zachowania ładunku elektrycznego}
+W~układzie izolowanym elektrycznie suma ładunków dodatnich i~ujemnych nie zmienia się w~czasie (ładunek jest zachowany). Oznacza to, że nie da się unicestwić ładunku.
+\subsubsection{Prawo Coulomba}
+Dotyczy siły oddziaływania między dwoma ładunkami kulistymi (punktowymi).
+\begin{mathfigure*}
+    \fillpoint*{-2, 0}[\(q_1\)][above];
+    \drawvec (-2, 0) -- node[above]{\(-\vec{F_\C}\)} (-4, 0);
+    \drawvec (3, 0) -- node[above]{\(\vec{F_\C}\)}(6, 0);
+    \drawdist (-2, -1) -- node[below]{\(r\)} (3, -1);
+    \draw (3, 0) circle[radius=1cm];
+    \fillpoint*{3, 0}[\(q_2\)][above];
+\end{mathfigure*}
+\begin{gather*}
+    F_\C = k \cdot \frac{q_1 \cdot q_2}{r^2}\\
+    k = 9 \cdot 10^9\frac{\N\m^2}{\C^2}
+    k = \frac{1}{4\pi\varepsilon_0}\\
+\end{gather*}
+\begin{description}
+    \item[\(\varepsilon_0\)] --- przenikalność elektryczna próżni
+        \begin{equation*}
+            \varepsilon_0 = 8,85 \cdot 10^{-12}\frac{\Farad}{\m}
+        \end{equation*}
+    \item[\(\varepsilon_r\)] --- względna przenikalność elektryczna
+        \begin{gather*}
+            \varepsilon_r = \frac{\varepsilon}{\varepsilon_0}\\
+            \varepsilon = \varepsilon_r \cdot \varepsilon_0
+        \end{gather*}
+        Dla wody wynosi \(\varepsilon_r = 81\)
+\end{description}
+\subsubsection*{Pole elektryczne}
+\begin{description}
+    \item[\(Q\)] --- ładunek wytwarzający pole
+    \item[\(q\)] --- ładunek próbny, którym będziemy sprawdzać siły oddziaływania
+    \item[\(\vec{E}\)] --- natężenie pola elektrycznego
+        \begin{equation*}
+            \vec{E}
+                = \frac{\vec{F_\C}}{q}
+                = \frac{\cancel{2}F_\C}{\cancel{2}q}
+                = \unit{\frac{\N}{\C}}
+                = \unit{\frac{\V}{\m}}
+        \end{equation*}
+\end{description}
+Jak obrazować pole elektryczne?
+\begin{itemize}
+    \item metoda pióropuszy (miałeś, chamie, czapkę z~piór) --- skrawki dielektryka umieszczone w~polu centralnym będą się polaryzować i~układać wzdłuż linii pola, pokazując, w~którą stronę zwrócone jest natężenie
+\end{itemize}
+Dipol elektryczny:
+\begin{description}
+    \item[\(p\)] --- moment dipolowy
+        \begin{equation*}
+            p = Qr
+        \end{equation*}
+\end{description}
+Pole jednorodne --- równoległe linie pola w~dielektryku.

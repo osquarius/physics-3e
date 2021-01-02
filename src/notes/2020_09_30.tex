@@ -1,0 +1,105 @@
+\subsection*{Ciśnienie atmosferyczne}
+\subsubsection*{Wzór barometryczny --- określa, jak zmienia się ciśnienie z~wysokością}
+\begin{equation*}
+    \varrho_\p{śr.powietrza} = 1,29\frac{\kg}{\m^3}
+\end{equation*}
+\begin{mathfig*}
+    \draw[fill=RoyalBlue] (0, 0) rectangle (2, 0.5);
+    \node at (2.5, 0.25) {\(\diff h\)};
+    \drawvec (1, 1.5) node[above]{\(\diff p = -\varrho g\diff h\)} -- (1, 0.5);
+    \drawvec (1, -1) node[below]{\(p\)} -- (1, 0);
+\end{mathfig*}
+\begin{gather*}
+    \diff p = -\varrho g\diff h\\
+    pV = nRT\\
+    pV = \frac{m}{M} \cdot RT\\
+    p\cancel{V} = \frac{\varrho \cdot \cancel{V}}{M} \cdot RT\\
+    \varrho = \frac{pM}{RT}\\
+    \diff p = \frac{-pMg\diff h}{RT}\\
+    \frac{\diff p}{p} = \frac{-Mg\diff h}{RT}
+\end{gather*}
+Teraz całkujemy obustronnie
+\begin{gather*}
+    \int\limits_{p_0}^{p_k} = -\frac{Mg}{RT} \cdot h\\
+    \ln\frac{p_k}{p_0} = -\frac{Mg}{RT} \cdot h\\
+    p_k = p_0 \cdot e^{-\frac{Mg}{RT} \cdot h} = p_0 \cdot e^{-0,125h}\\
+    p_0 = 1013,25\hPa
+\end{gather*}
+\subsubsection*{Entropia}
+\begin{equation*}
+    S \coloneqq \frac{\Delta Q}{T} = \unit{\frac{\J}{\K}} \qquad T = \constfont{const} \text{ (przemiana izotermiczna)}\\
+\end{equation*}
+Co robimy, jeśli przemiana nie jest izotermiczna? Rozbijamy przemianę na małe fragmenty, w~których przyjmujemy, że temperatura jest stała, i~całkujemy:
+\begin{equation*}
+    \Delta S = \int\frac{\diff Q}{T}
+\end{equation*}
+Przykład: jak liczymy zmianę entropii w~przypadku przemiany izobrycznej (\(p = \constfont{const}\))?
+\begin{gather*}
+    \diff U = \diff Q - \diff W\\
+    \diff Q = \diff U + \diff W\\
+    \diff Q = c_V \cdot n \cdot \diff T + n \cdot R \cdot \diff
+\end{gather*}
+Podstawiamy do wzoru na \(\Delta S\):
+\begin{equation*}
+    \Delta S = \int\limits_{T_0}^{T_k} \frac{c_V \cdot n \cdot \diff T}{T} + \int\limits_{T_0}^{T_k} \frac{nR\diff T}{T}
+    = c_V \cdot n \cdot \int\limits_{T_0}^{T_k} + nR \cdot \int\limits_{T_0}^{T_k} \frac{\diff T}{T} = c_V \cdot n \cdot \ln\frac{T_k}{T_0} + nR\ln\frac{T_k}{T_0}
+\end{equation*}
+W~przemianie izobarycznej
+\begin{gather*}
+    \frac{V_0}{T_0} = \frac{V_k}{T_k}\\
+    \frac{V_k}{V_0} = \frac{T_k}{T_0}
+\end{gather*}
+Zatem
+\begin{equation*}
+    \Delta S = \ln\frac{T_k}{T_0} + nR\ln\frac{T_k}{T_0}
+    = c_V \cdot n \cdot \ln\frac{T_k}{T_0} + nR\ln\frac{V_k}{V_0}
+\end{equation*}
+\begin{description}
+    \item[\(T = \constfont{const}\)] --- w~przemianie izotermicznej pierwszy składnik sumy się zeruje
+        \begin{equation*}
+            \Delta S = nR\ln\frac{V_k}{V_0}
+        \end{equation*}
+    \item[\(V = \constfont{const}\)] --- w~przemianie izochorycznej drugi składnik sumy się zeruje
+        \begin{equation*}
+            \Delta S = c_V \cdot n \cdot \ln\frac{T_k}{T_0}
+        \end{equation*}
+    \item w~przemianie adiabatycznej (idealnej)
+        \begin{equation*}
+            \Delta S = 0
+        \end{equation*}
+\end{description}
+Możemy tak sformułować II~zasadę termodynamiki:
+\begin{tcolorbox}
+    W~układach izolowanych adiabatycznie, zmiana entropii \(\Delta S \geq 0\). \(\Delta S = 0\) dla procesów odwracalnych, \(\Delta S > 0\) dla procesów nieodwracalnych
+\end{tcolorbox}
+Kiedy proces jest odwracalny?
+\begin{equation*}
+    p_1, V_1, T_1 \xrightleftharpoons{\downarrow Q \uparrow Q} p_2, V_2, T_2
+\end{equation*}
+\subsubsection*{}
+\begin{mathfigure*}
+    \draw (-1, -0.5) rectangle (1, 0.5);
+    \draw (0, 0.5) -- (0, -0.5);
+    \fillpoint*[1][ForestGreen][ForestGreen]{-0.5, 0};
+    \fillpoint*[1][RoyalBlue][RoyalBlue]{0.5, 0};
+    \draw (-1, -2.5) rectangle (1, -1.5);
+    \draw (0, -1.5) -- (0, -2.5);
+    \fillpoint*[1][RoyalBlue][RoyalBlue]{-0.5, -2};
+    \fillpoint*[1][ForestGreen][ForestGreen]{0.5, -2};
+    \draw (2, -0.5) rectangle (4, 0.5);
+    \draw (3, 0.5) -- (3, -0.5);
+    \fillpoint*[1][ForestGreen][ForestGreen]{2.25, 0};
+    \fillpoint*[1][RoyalBlue][RoyalBlue]{2.75, 0};
+    \draw (2, -2.5) rectangle (4, -1.5);
+    \draw (3, -1.5) -- (3, -2.5);
+    \fillpoint*[1][ForestGreen][ForestGreen]{3.25, -2};
+    \fillpoint*[1][RoyalBlue][RoyalBlue]{3.75, -2};
+\end{mathfigure*}
+Najbardziej prawdopodobne jest równomierne rozłożenie cząsteczek.
+\begin{gather*}
+    N \coloneqq \text{ilość cząsteczek}\\
+    \pars{\frac{1}{2}}^N\\
+    \pars{\frac{\diff V}{V}}^N\\
+    S = k_\p{B} \cdot \ln P
+\end{gather*}
+\(P\) to prawdopodobieństwo termodynamiczne, czyli liczba mikrostanów opisujących dany makrostan.
